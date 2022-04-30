@@ -1,10 +1,18 @@
 ﻿using LaunchpadCodeChallenge.API.Models.Entities;
+using LaunchpadCodeChallenge.API.Repositories;
 using LaunchpadCodeChallenge.API.Services.Interfaces;
 
 namespace LaunchpadCodeChallenge.API.Services
 {
     public class EmployeeService : IEmployeeService
     {
+        private readonly IUnitOfWork _uow;
+
+        public EmployeeService(IUnitOfWork uow)
+        {
+            _uow = uow;
+        }
+
         public IEnumerable<Employee> GetAll()
         {
             // Setup test data
@@ -18,6 +26,13 @@ namespace LaunchpadCodeChallenge.API.Services
             departments[0].Employees.Add(employees[0]);
             departments[0].Employees.Add(employees[1]);
             departments[1].Employees.Add(employees[2]);
+
+            /* To Use If Database Was Implemented:
+            
+            // Add async to method call and grab employee data from DbSet 
+            var employees = await _uow.Employees.GetAll();
+             
+             */
 
             // Return employees
             return employees;

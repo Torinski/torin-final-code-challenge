@@ -3,7 +3,19 @@ using LaunchpadCodeChallenge.API.Services.Interfaces;
 
 void ConfigureServices(WebApplicationBuilder builder)
 {
-    builder.Services.AddControllers(); 
+    builder.Services.AddControllers();
+
+    // Add to configuration if database was implemented:
+
+    //builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    //    options.UseNpgsql(
+    //        builder.Configuration.GetConnectionString("DefaultConnection"),
+    //        b =>
+    //        {
+    //            b.MigrationsAssembly("LaunchpadCodeChallenge.API.Repositories");
+    //        })
+    //    );
+
     builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 }
 

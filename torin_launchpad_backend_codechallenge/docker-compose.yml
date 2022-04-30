@@ -10,3 +10,21 @@ services:
     ports:
       - "35000:80"
       - "35001:443"
+#    depends_on:
+#      - launchpadcodechallenge.db
+
+#  launchpadcodechallenge.db:
+#    restart: on-failure
+#    image: "postgis/postgis:14-3.1-alpine"
+#    container_name: "launchpadcodechallenge.db"
+#    environment: 
+#      - POSTGRES_USER=devdbuser
+#      - POSTGRES_DB=devdb
+#      - POSTGRES_PASSWORD=devdbpassword
+#    volumes:
+#      - launchpadcodechallenge-db:/var/lib/postgresql/data
+#    ports:
+#      - "35010:5432"
+
+#volumes:
+#  launchpadcodechallenge-db: 
