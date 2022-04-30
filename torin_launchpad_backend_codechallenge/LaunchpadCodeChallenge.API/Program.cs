@@ -7,6 +7,7 @@ void ConfigureServices(WebApplicationBuilder builder)
     builder.Services.AddControllers();
 
     // Add to configuration if database was implemented:
+    // Would also need to add NuGet packages to support this database.
 
     //builder.Services.AddDbContext<ApplicationDbContext>(options =>
     //    options.UseNpgsql(
