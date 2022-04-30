@@ -10,6 +10,9 @@ services:
     ports:
       - "35000:80"
       - "35001:443"
+    #environment:
+    #  - ASPNETCORE_ENVIRONMENT=Development
+    #  - ConnectionStrings__DefaultConnection=Server=gameswap.db;Database=devdb;User Id=devdbuser;password=devdbpassword
 #    depends_on:
 #      - launchpadcodechallenge.db
 
