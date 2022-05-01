@@ -11,7 +11,7 @@ public class Function
 {
     public void FunctionHandler(DynamoDBEvent dynamoEvent, ILambdaContext context)
     {
-        context.Logger.LogInformation($"Beginning to process {dynamoEvent.Records.Count} records...");
+        //context.Logger.LogInformation($"Beginning to process {dynamoEvent.Records.Count} records...");
 
         foreach (var record in dynamoEvent.Records)
         {
@@ -21,6 +21,6 @@ public class Function
             // TODO: Add business logic processing the record.Dynamodb object.
         }
 
-        context.Logger.LogInformation("Stream processing complete.");
+        //context.Logger.LogInformation("Stream processing complete.");
     }
 }
