@@ -6,6 +6,7 @@ namespace LaunchpadCodeChallenge.API.Services
 {
     public class EmployeeService : IEmployeeService
     {
+        // Dependency injection setup
         private readonly IUnitOfWork _uow;
 
         public EmployeeService(IUnitOfWork uow)

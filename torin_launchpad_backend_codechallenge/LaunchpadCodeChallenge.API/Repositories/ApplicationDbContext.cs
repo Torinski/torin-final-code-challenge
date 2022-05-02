@@ -10,6 +10,7 @@ namespace LaunchpadCodeChallenge.API.Repositories
         {
         }
 
+        // Initialize DbSets for data
         public DbSet<Department> Departments => Set<Department>();
         public DbSet<Employee> Employees => Set<Employee>();
     }

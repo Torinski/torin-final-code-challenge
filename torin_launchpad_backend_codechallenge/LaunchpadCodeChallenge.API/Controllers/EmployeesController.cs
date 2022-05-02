@@ -9,6 +9,7 @@ namespace LaunchpadCodeChallenge.API.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
+        // Dependency injection setups
         private readonly IEmployeeService _employeeService;
 
         public EmployeesController(IEmployeeService employeeService)
@@ -16,6 +17,7 @@ namespace LaunchpadCodeChallenge.API.Controllers
             _employeeService = employeeService;
         }
 
+        // Endpoint to get all employees
         [HttpGet]
         public ActionResult<IEnumerable<EmployeeVM>> Get()
         {
@@ -33,6 +35,7 @@ namespace LaunchpadCodeChallenge.API.Controllers
             }
         }
 
+        // Endpoint to get all employees within a specific department
         [HttpGet("department/{departmentId}")]
         public ActionResult<IEnumerable<EmployeeVM>> Get([FromRoute] Guid departmentId)
         {

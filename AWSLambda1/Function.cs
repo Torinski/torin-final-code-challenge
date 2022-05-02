@@ -15,7 +15,10 @@ public class Function
 
         foreach (var record in dynamoEvent.Records)
         {
+            // Log Id of DynamoDbEvent, used to test function initially
             //context.Logger.LogInformation($"Event ID: {record.EventID}");
+
+            // Log each entries' Id of DynamoDb update for challenge
             context.Logger.LogInformation($"Entry ID: {record.Dynamodb.Keys["id"].S}");
         }
 

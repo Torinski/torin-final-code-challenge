@@ -6,6 +6,7 @@ namespace LaunchpadCodeChallenge.API.Repositories.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
+        // Dependency injection setup
         private readonly ApplicationDbContext _context;
 
         public EmployeeRepository(ApplicationDbContext context)

@@ -20,6 +20,7 @@ namespace AWSLambda1.Test
         [SetUp]
         public void Setup()
         {
+            // Set up DynamoDbEvents to test our lambda function with
             dynamoEventMock = new DynamoDBEvent
             {
                 Records = new List<DynamoDBEvent.DynamodbStreamRecord>

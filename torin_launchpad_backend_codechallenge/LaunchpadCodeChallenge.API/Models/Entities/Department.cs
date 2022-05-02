@@ -7,6 +7,7 @@
 
         public string Name { get; set; } = string.Empty;
         
+        // Relationship
         public ICollection<Employee> Employees = new List<Employee>();
     }
 }
