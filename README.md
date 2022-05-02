@@ -22,7 +22,8 @@ AWSLambda1 project, while the tests are located in the AWSLambda1.Test project.
 
 ### GET
 
-http://localhost:35000/api/employess
+http://localhost:35000/api/employees,
+
 http://localhost:35000/api/employees/department/{departmentId}
 
 #### GET /api/employees
